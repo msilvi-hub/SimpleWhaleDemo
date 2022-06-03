@@ -5,7 +5,10 @@ name: My CI to Docker HUB
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
+  # the main CI will only trigger if we tag our commits with V.n.n.n.
   push:
+    tags:
+      - "v*.*.*"
     branches: [ main ]
 #  pull_request:
 #    branches: [ master ]
